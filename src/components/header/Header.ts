@@ -2,7 +2,7 @@ export const headerContent = {
     tabs: [
         {
             title: 'Home',
-            url: '/landing-page'
+            url: '/'
         },
         {
             title: 'Projects',

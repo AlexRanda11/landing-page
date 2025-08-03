@@ -5,7 +5,7 @@ import Projects from './pages/Projects.tsx';
 export default function App() {
   return (
     <Routes>
-      <Route path='/landing-page' element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
       <Route path='/projects' element={<Projects />} />
     </Routes>
   );
