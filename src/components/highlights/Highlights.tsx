@@ -7,7 +7,7 @@ import { highlightsContent } from './Highlights';
 const SyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
-    padding: 0,
+    paddingTop: 0,
     height: '100%',
     backgroundColor: (theme.vars || theme).palette.background.paper,
     '&:hover': {
@@ -41,7 +41,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
   });
 
 
-  export default function Blog() {
+  export default function Highlights() {
     const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
       null,
     );
@@ -58,7 +58,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
       <Container
         maxWidth="lg"
         component="main"
-        sx={{ display: 'flex', flexDirection: 'column', marginTop: 0, marginBottom: 13, gap: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 13, gap: 4 }}
       >  
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <div>
