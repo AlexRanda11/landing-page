@@ -6,6 +6,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../../assets/shared-theme/ColorModeIconDropdown';
 import Sitemark from '../marketing-page/SitemarkIcon';
 import { headerContent } from './Header';
+import { useNavigate } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -25,6 +26,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -47,7 +49,7 @@ export default function Header() {
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               {headerContent.tabs.map(tab => {
-                return (<Button variant="text" color="info" size="small">{tab}</Button>)
+                return (<Button variant="text" color="info" size="small" onClick={() => navigate(tab.url)}>{tab.title}</Button>)
               })}
             </Box>
           </Box>
@@ -89,8 +91,8 @@ export default function Header() {
 
                 {headerContent.tabs.map((tab, index) => {
                   return (
-                    <MenuItem key={index}>
-                      {tab}
+                    <MenuItem key={index} onClick={() => navigate(tab.url)}>
+                      {tab.title}
                     </MenuItem>
                   );
                 })}

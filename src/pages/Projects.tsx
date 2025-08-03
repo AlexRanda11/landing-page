@@ -1,4 +1,4 @@
-import { CssBaseline, Divider } from "@mui/material"
+import { CssBaseline, Divider, Container } from "@mui/material"
 import AppTheme from "../assets/shared-theme/AppTheme"
 import Header from "../components/header/Header.tsx"
 import Hero from "../components/hero/Hero.tsx"
@@ -8,7 +8,7 @@ export default function Projects(props: { disableCustomTheme?: boolean }) {
         <AppTheme {...props}>
             <CssBaseline enableColorScheme />
             <Header />
-            <Hero />
+            {/* <Hero /> */}
             <Divider />
         </AppTheme>
     )
