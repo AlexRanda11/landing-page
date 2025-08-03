@@ -79,6 +79,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
                     onBlur={handleBlur}
                     tabIndex={0}
                     className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                    onClick={() => window.open(card.url, '_blank')}
                     >
                     <CardMedia
                       component="img"
@@ -94,7 +95,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
                       <Typography gutterBottom variant="caption" component="div">
                         {card.tag}
                       </Typography>
-                      <Typography gutterBottom variant="h6" component="div" onClick={() => window.open(card.url, '_blank')}>
+                      <Typography gutterBottom variant="h6" component="div">
                         {card.title}
                       </Typography>
                       <StyledTypography variant="body2" color="text.secondary" gutterBottom>
