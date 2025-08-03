@@ -4,7 +4,7 @@ import AppTheme from '../assets/shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
 import Hero from '../components/hero/Hero.tsx';
 import Footer from '../components/Footer';
-import Blog from '../components/blog/Blog.tsx';
+import Blog from '../components/highlights/Highlights.tsx';
 
 export default function HomePage(props: { disableCustomTheme?: boolean }) {
   return (
