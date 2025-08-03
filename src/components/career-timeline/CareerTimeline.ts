@@ -1,5 +1,5 @@
 export const careerTimelineContent = {
-    title: 'Career',
+    title: 'Career & Education',
     description: 'A brief overview of my career journey.',
     jobs: [
         'Senior Software Engineer at Lloyds Banking Group',

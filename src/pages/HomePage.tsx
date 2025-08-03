@@ -2,7 +2,7 @@ import { CssBaseline, Divider } from '@mui/material';
 import AppTheme from '../assets/shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
 import Hero from '../components/hero/Hero.tsx';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer.tsx';
 import Highlights from '../components/highlights/Highlights.tsx';
 import CareerTimeline from '../components/career-timeline/CareerTimeline.tsx';
 

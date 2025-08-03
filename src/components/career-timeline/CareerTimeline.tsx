@@ -25,7 +25,7 @@ export default function BasicTimeline() {
                             <TimelineSeparator>
                             <TimelineDot 
                                 variant='outlined'
-                                color={index % 3 === 0 ? 'primary' : index % 3 === 1 ? 'secondary' : 'success'}
+                                color={index % 3 === 0 ? 'success' : index % 3 === 1 ? 'secondary' : 'primary'}
                             />
                             <TimelineConnector />
                             </TimelineSeparator>
