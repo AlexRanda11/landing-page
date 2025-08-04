@@ -7,11 +7,11 @@ export default function SeeMore({text, url}: {text: string, url: string}) {
 
     return (
         <Button
-                endIcon={<KeyboardArrowRight />}
-                variant="outlined"
-                size="large"
-                sx={{ alignSelf: 'flex-end', marginTop: 2 }}
-                onClick={() => {navigate(url)}}
-            >{text}</Button>
+            endIcon={<KeyboardArrowRight />}
+            variant="outlined"
+            size="large"
+            sx={{ alignSelf: 'flex-end', marginTop: 2 }}
+            onClick={() => {navigate(url)}}
+        >{text}</Button>
     )
 }

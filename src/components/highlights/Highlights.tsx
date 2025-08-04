@@ -3,6 +3,7 @@ import { Box, Card, CardContent, CardMedia, Grid, Typography, Container } from '
 import { styled } from '@mui/material/styles';
 import Author from './Author';
 import { highlightsContent } from './Highlights';
+import SeeMore from '../see-more-button/SeeMore';
 
 const SyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
@@ -58,7 +59,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
       <Container
         maxWidth="lg"
         component="main"
-        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 13, gap: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 10, gap: 4 }}
       >  
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <div>
@@ -73,43 +74,47 @@ const SyledCard = styled(Card)(({ theme }) => ({
               highlightsContent.cardData.map((card, index) => {
                 return (
                   <Grid key={index} size={{ xs: 12, md: 6 }}>
-                  <SyledCard
-                    variant="outlined"
-                    onFocus={() => handleFocus(0)}
-                    onBlur={handleBlur}
-                    tabIndex={0}
-                    className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-                    onClick={() => window.open(card.url, '_blank')}
-                    >
-                    <CardMedia
-                      component="img"
-                      alt="green iguana"
-                      image={card.img}
-                      sx={{
-                        aspectRatio: '16 / 9',
-                        borderBottom: '1px solid',
-                        borderColor: 'divider',
-                      }}
-                      />
-                    <SyledCardContent>
-                      <Typography gutterBottom variant="caption" component="div">
-                        {card.tag}
-                      </Typography>
-                      <Typography gutterBottom variant="h6" component="div">
-                        {card.title}
-                      </Typography>
-                      <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                        {card.description}
-                      </StyledTypography>
-                    </SyledCardContent>
-                    <Author authors={card.authors} date={card.date} />
-                  </SyledCard>
-                </Grid>
+                    <SyledCard
+                      variant="outlined"
+                      onFocus={() => handleFocus(0)}
+                      onBlur={handleBlur}
+                      tabIndex={0}
+                      className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                      onClick={() => window.open(card.url, '_blank')}
+                      >
+                      <CardMedia
+                        component="img"
+                        alt="green iguana"
+                        image={card.img}
+                        sx={{
+                          aspectRatio: '16 / 9',
+                          borderBottom: '1px solid',
+                          borderColor: 'divider',
+                        }}
+                        />
+                      <SyledCardContent>
+                        <Typography gutterBottom variant="caption" component="div">
+                          {card.tag}
+                        </Typography>
+                        <Typography gutterBottom variant="h6" component="div">
+                          {card.title}
+                        </Typography>
+                        <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                          {card.description}
+                        </StyledTypography>
+                      </SyledCardContent>
+                      <Author authors={card.authors} date={card.date} />
+                    </SyledCard>
+                  </Grid>
                 )
               })
             }
           </Grid>
         </Box>
+        <SeeMore
+          text={highlightsContent.seeMoreButtonText}
+          url="/research"
+        />
       </Container>
     );
   }

@@ -26,5 +26,6 @@ const cardData = [
 export const highlightsContent = {
   title: 'Highlights',
   description: 'Stuff I\'ve been up to.',
-  cardData
+  cardData,
+  seeMoreButtonText: 'See more',
 }
