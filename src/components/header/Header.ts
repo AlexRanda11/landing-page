@@ -5,8 +5,8 @@ export const headerContent = {
             url: '/'
         },
         {
-            title: 'Projects',
-            url: '/projects'
+            title: 'Resume',
+            url: '/resume'
         },
     ]
 }

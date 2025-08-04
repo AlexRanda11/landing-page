@@ -41,5 +41,6 @@ export const careerTimelineContent = {
         'primary',
         'secondary',
         'success'
-    ]
+    ],
+    seeMoreButtonText: 'See more'
 }

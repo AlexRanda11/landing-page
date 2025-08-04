@@ -4,13 +4,14 @@ import {
 import { Container, Box, Typography } from '@mui/material';
 import { careerTimelineContent } from './CareerTimeline';
 import { School, SchoolOutlined } from '@mui/icons-material';
+import SeeMore from '../see-more-button/SeeMore';
 
 export default function BasicTimeline() {
   return (
     <Container
         maxWidth="lg"
         component="main"
-        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 13, gap: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 10, gap: 4 }}
     >
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             <div>
@@ -41,6 +42,10 @@ export default function BasicTimeline() {
                     )
                 })}
             </Timeline>
+            <SeeMore 
+                text={careerTimelineContent.seeMoreButtonText} 
+                url='/resume' 
+            />
         </Box>
     </Container>
   );
