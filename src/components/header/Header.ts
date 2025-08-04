@@ -8,5 +8,9 @@ export const headerContent = {
             title: 'Resume',
             url: '/resume'
         },
+        {
+            title: 'Research',
+            url: '/research'
+        }
     ]
 }

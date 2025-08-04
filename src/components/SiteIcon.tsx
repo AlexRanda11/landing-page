@@ -1,6 +1,5 @@
 export default function SiteIcon({ icon = 'AR2' }: { icon?: string }) {
   const iconPath = `${import.meta.env.BASE_URL}assets/images/${icon}.png`;
-  console.log(`iconPath: ${iconPath}`);
 
   return (
     <img

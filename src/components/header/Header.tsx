@@ -4,7 +4,7 @@ import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem,
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
-import SiteIcon from '../marketing-page/SiteIcon';
+import SiteIcon from '../SiteIcon';
 import { headerContent } from './Header';
 import { useNavigate } from 'react-router-dom';
 
