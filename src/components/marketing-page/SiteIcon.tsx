@@ -1,4 +1,4 @@
-export default function SitemarkIcon({ icon = 'AR2' }: { icon?: string }) {
+export default function SiteIcon({ icon = 'AR2' }: { icon?: string }) {
   const iconPath = `${import.meta.env.BASE_URL}assets/images/${icon}.png`;
   console.log(`iconPath: ${iconPath}`);
 
@@ -9,7 +9,7 @@ export default function SitemarkIcon({ icon = 'AR2' }: { icon?: string }) {
       style={{
         width: '100px', // Adjust width as needed
         height: 'auto', // Maintain aspect ratio
-        marginRight: '10px', // Add spacing if needed
+        marginRight: '8px', // Add spacing if needed
         paddingBottom: '5px'
       }}
     />
