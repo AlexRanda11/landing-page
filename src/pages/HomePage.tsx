@@ -1,5 +1,5 @@
 import { CssBaseline, Divider } from '@mui/material';
-import AppTheme from '../assets/shared-theme/AppTheme';
+import AppTheme from '../shared-theme/AppTheme.tsx';
 import Header from '../components/header/Header.tsx';
 import Hero from '../components/hero/Hero.tsx';
 import Footer from '../components/footer/Footer.tsx';

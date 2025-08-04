@@ -3,7 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem, Drawer } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '../../assets/shared-theme/ColorModeIconDropdown';
+import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
 import Sitemark from '../marketing-page/SitemarkIcon';
 import { headerContent } from './Header';
 import { useNavigate } from 'react-router-dom';
@@ -46,10 +46,10 @@ export default function Header() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Sitemark />
+            <Sitemark icon='AR1' />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              {headerContent.tabs.map(tab => {
-                return (<Button variant="text" color="info" size="small" onClick={() => navigate(tab.url)}>{tab.title}</Button>)
+              {headerContent.tabs.map((tab, index) => {
+                return (<Button key={index} variant="text" color="info" size="small" onClick={() => navigate(tab.url)}>{tab.title}</Button>)
               })}
             </Box>
           </Box>

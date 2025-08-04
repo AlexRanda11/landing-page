@@ -22,7 +22,7 @@ export default function BasicTimeline() {
             <Timeline position='alternate-reverse'>
                 {careerTimelineContent.positions.map((position, index) => {
                     return (
-                        <TimelineItem>
+                        <TimelineItem key={index}>
                             <TimelineSeparator>
                             {
                                 position.tag == 'career' ? 

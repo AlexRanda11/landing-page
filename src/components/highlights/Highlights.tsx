@@ -70,9 +70,9 @@ const SyledCard = styled(Card)(({ theme }) => ({
 
           <Grid container spacing={2} columns={12}>
             {
-              highlightsContent.cardData.map(card => {
+              highlightsContent.cardData.map((card, index) => {
                 return (
-                  <Grid size={{ xs: 12, md: 6 }}>
+                  <Grid key={index} size={{ xs: 12, md: 6 }}>
                   <SyledCard
                     variant="outlined"
                     onFocus={() => handleFocus(0)}

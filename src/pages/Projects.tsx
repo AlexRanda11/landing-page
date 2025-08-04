@@ -1,5 +1,5 @@
-import { CssBaseline, Divider, Container } from "@mui/material"
-import AppTheme from "../assets/shared-theme/AppTheme"
+import { CssBaseline } from "@mui/material"
+import AppTheme from "../shared-theme/AppTheme.tsx"
 import Header from "../components/header/Header.tsx"
 import Breadcrumb from "../components/breadcrumb/Breadcrumb.tsx"
 
