@@ -1,31 +1,24 @@
 import AppTheme from "../../shared-theme/AppTheme";
-import { CssBaseline, Box, Typography, Container } from "@mui/material"
+import { CssBaseline, Divider, Box, Typography, Container } from "@mui/material"
 import Header from "../../components/header/Header.tsx";
 import Breadcrumb from "../../components/Breadcrumb.tsx";
 import { researchContent } from "./Research.ts";
+import Hero from "../../components/hero/Hero.tsx";
+import TitleText from "../titleText/TitleText.tsx";
 
 export default function Research() {
     return (
         <AppTheme>
             <CssBaseline enableColorScheme />
                 <Header />
-                <Container
-                    maxWidth="lg"
-                    component="main"
-                    sx={{ display: 'flex', flexDirection: 'column', marginTop: 15, marginBottom: 13, gap: 4 }}
-                >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                        <div role="presentation">
-                            <Breadcrumb currentPage={researchContent.title}/>
-                            <Box sx={{ display: 'flex', marginTop: 5, flexDirection: 'column', gap: 4 }}>
-                                <Typography variant="h1" gutterBottom>
-                                    {researchContent.title}
-                                </Typography>
-                                <Typography>{researchContent.description}</Typography>
-                            </Box>
-                        </div>
-                    </Box>
-                </Container>
+                <Hero />
+                <Divider />
+                <Breadcrumb currentPage={researchContent.title} />
+                <TitleText
+                    title={researchContent.title}
+                    description={researchContent.description}
+                    size="h1"
+                />
         </AppTheme>
     );
 }
