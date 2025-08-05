@@ -1,5 +1,5 @@
 import AppTheme from "../../shared-theme/AppTheme";
-import { CssBaseline, Divider, Box, Typography, Container } from "@mui/material"
+import { CssBaseline, Divider } from "@mui/material"
 import Header from "../../components/header/Header.tsx";
 import Breadcrumb from "../../components/Breadcrumb.tsx";
 import { researchContent } from "./Research.ts";
