@@ -11,7 +11,7 @@ export default function BasicTimeline() {
     <Container
         maxWidth="lg"
         component="main"
-        sx={{ display: 'flex', flexDirection: 'column', marginTop: 10, marginBottom: 10, gap: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column', marginTop: 8, marginBottom: 10, gap: 4 }}
     >
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             <div>
