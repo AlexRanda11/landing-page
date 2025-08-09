@@ -34,6 +34,20 @@ export default function Hero() {
           sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
         >
           <HeroName />
+          <img
+            src={heroContent.image}
+            style={{
+              width: '100%',
+              maxWidth: '250px',
+              height: 'auto',
+              borderRadius: '8px',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+              padding: '8px',
+              backgroundColor: 'white',
+              marginTop: '16px',
+              marginBottom: '16px'
+            }}
+            />
           <HeroText />
         </Stack>
       </Container>
