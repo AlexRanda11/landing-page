@@ -1,8 +1,7 @@
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import { heroContent } from './Hero';
+import HeroName from './hero-name/HeroName.tsx';
+import HeroText from './hero-text/HeroText.tsx';
 
 export default function Hero() {
   return (
@@ -26,7 +25,7 @@ export default function Hero() {
           flexDirection: 'column',
           alignItems: 'center',
           pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
+          pb: { xs: 8, sm: 8 },
         }}
       >
         <Stack
@@ -34,39 +33,8 @@ export default function Hero() {
           useFlexGap
           sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
-              alignItems: 'center',
-              fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-            }}
-          >
-            {heroContent.firstName}
-            <Typography
-              component="span"
-              variant="h1"
-              sx={(theme) => ({
-                fontSize: 'inherit',
-                color: '#5071FF',
-                ...theme.applyStyles('dark', {
-                  color: '#5071FF',
-                }),
-              })}
-            >
-              {heroContent.lastName}
-            </Typography>
-          </Typography>
-          <Typography
-            sx={{
-              textAlign: 'center',
-              color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
-            }}
-          >
-            {heroContent.text}
-          </Typography>
+          <HeroName />
+          <HeroText />
         </Stack>
       </Container>
     </Box>
