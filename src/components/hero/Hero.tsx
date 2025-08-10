@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack } from '@mui/material';
 import { heroContent } from './Hero';
 import HeroName from './hero-name/HeroName.tsx';
 import HeroText from './hero-text/HeroText.tsx';
