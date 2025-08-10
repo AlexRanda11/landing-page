@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem, Drawer } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem, Drawer, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
@@ -46,11 +46,19 @@ export default function Header() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <SiteIcon icon='AR1' />
+            <SiteIcon icon="AR1" />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              {headerContent.tabs.map((tab, index) => {
-                return (<Button key={index} variant="text" color="info" size="small" onClick={() => navigate(tab.url)}>{tab.title}</Button>)
-              })}
+              {headerContent.tabs.map((tab, index) => (
+                <Button
+                  key={index}
+                  variant="text"
+                  color="info"
+                  size="small"
+                  onClick={() => navigate(tab.url)}
+                >
+                  {tab.title}
+                </Button>
+              ))}
             </Box>
           </Box>
           <Box
@@ -89,14 +97,41 @@ export default function Header() {
                   </IconButton>
                 </Box>
 
-                {headerContent.tabs.map((tab, index) => {
-                  return (
-                    <MenuItem key={index} onClick={() => navigate(tab.url)}>
-                      {tab.title}
-                    </MenuItem>
-                  );
-                })}
+                {headerContent.tabs.map((tab, index) => (
+                  <MenuItem key={index} onClick={() => navigate(tab.url)}>
+                    {tab.title}
+                  </MenuItem>
+                ))}
+
+                {/* Divider for separating main tabs and sub-pages */}
                 <Divider sx={{ my: 3 }} />
+
+                {/* Resume Heading */}
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    fontWeight: 'bold',
+                    paddingRight: 2,
+                    mt: 2,
+                    mb: 1,
+                    color: 'text.primary',
+                  }}
+                >
+                  {headerContent.tabs[1].title}
+                </Typography>
+
+                {/* Sub-pages for Resume */}
+                {headerContent.resumeSubTabs.map((subPage, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={() => {
+                      navigate(subPage.url);
+                      toggleDrawer(false)(); // Close the drawer after navigation
+                    }}
+                  >
+                    {subPage.title}
+                  </MenuItem>
+                ))}
               </Box>
             </Drawer>
           </Box>

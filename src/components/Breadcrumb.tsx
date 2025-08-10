@@ -1,7 +1,7 @@
 import { Container, Breadcrumbs, Link, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-export default function Breadcrumb({currentPage}: {currentPage: string}) {
+export default function Breadcrumb({currentPage, subPage}: {currentPage: string, subPage?: string}) {
     const navigate = useNavigate();
 
   return (
@@ -16,6 +16,9 @@ export default function Breadcrumb({currentPage}: {currentPage: string}) {
               Home
           </Link>
           <Typography sx={{ color: 'text.primary' }}>{currentPage}</Typography>
+            {subPage && (
+              <Typography sx={{ color: 'text.primary' }}>{subPage}</Typography>
+            )}
       </Breadcrumbs> 
     </Container>
   );

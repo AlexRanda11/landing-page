@@ -12,5 +12,19 @@ export const headerContent = {
             title: 'Research',
             url: '/research'
         }
-    ]
+    ],
+    resumeSubTabs: [
+        { 
+            title: 'Skills', 
+            url: '/resume#Skills' 
+        },
+        { 
+            title: 'Experience', 
+            url: '/resume#Experience' 
+        },
+        { 
+            title: 'Certifications', 
+            url: '/resume#Certifications'
+        },
+      ]
 }
