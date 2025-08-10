@@ -6,6 +6,7 @@ import { resumeContent } from "./Resume.ts"
 import SkillCard from "../../components/skillCard/SkillCard.tsx"
 import Experience from "../../components/experience/Experience.tsx"
 import TitleText from "../titleText/TitleText.tsx"
+import Education from "../../components/education/Education.tsx"
 
 
 export default function Resume() {
@@ -22,6 +23,7 @@ export default function Resume() {
                     />
                 <SkillCard />
                 <Experience />
+                <Education />
             </Container>
         </AppTheme>
     )
