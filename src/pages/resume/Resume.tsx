@@ -3,8 +3,10 @@ import AppTheme from "../../shared-theme/AppTheme.tsx"
 import Header from "../../components/header/Header.tsx"
 import Breadcrumb from "../../components/Breadcrumb.tsx"
 import { resumeContent } from "./Resume.ts"
-import TitleText from "../titleText/TitleText.tsx"
 import SkillCard from "../../components/skillCard/SkillCard.tsx"
+import Experience from "../../components/experience/Experience.tsx"
+import TitleText from "../titleText/TitleText.tsx"
+
 
 export default function Resume() {
     return (
@@ -18,12 +20,8 @@ export default function Resume() {
                     description={resumeContent.description}
                     size="h1"
                     />
-                <TitleText
-                    title={resumeContent.skillsTitle}
-                    description={resumeContent.skillsDescription}
-                    size="h2"
-                    />
-                <SkillCard/>
+                <SkillCard />
+                <Experience />
             </Container>
         </AppTheme>
     )

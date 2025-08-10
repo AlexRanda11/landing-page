@@ -104,5 +104,7 @@ const skillsData: SkillCategory[] = [
 ]
 
 export const skillCardContent = {
-    skills: skillsData
+    skills: skillsData,
+    skillsTitle: 'Skills & Professional Overview',
+    skillsDescription: 'This page provides a dynamic overview of my professional journey, key skills, and experience. For a comprehensive version, please feel free to download my CV below.',
 }
