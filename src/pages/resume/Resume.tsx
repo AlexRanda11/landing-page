@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CssBaseline, Box, Container, Tab, Tabs } from "@mui/material";
+import { CssBaseline, Box, Container, Tab, Tabs, Divider } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
 import AppTheme from "../../shared-theme/AppTheme.tsx";
 import Header from "../../components/header/Header.tsx";
@@ -9,6 +9,7 @@ import SkillCard from "../../components/skillCard/SkillCard.tsx";
 import Experience from "../../components/experience/Experience.tsx";
 import TitleText from "../titleText/TitleText.tsx";
 import Education from "../../components/education/Education.tsx";
+import Footer from "../../components/footer/Footer.tsx";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -99,6 +100,8 @@ export default function Resume() {
           </CustomTabPanel>
         </Box>
       </Container>
+      <Divider />
+      <Footer />
     </AppTheme>
   );
 }
