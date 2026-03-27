@@ -3,7 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem, Drawer, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
+import ColorModeIcon from '../../shared-theme/ColorModeIcon';
 import SiteIcon from '../SiteIcon';
 import { headerContent } from './Header';
 import { useNavigate } from 'react-router-dom';
@@ -68,10 +68,10 @@ export default function Header() {
               alignItems: 'center',
             }}
           >
-            <ColorModeIconDropdown />
+            <ColorModeIcon />
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-            <ColorModeIconDropdown size="medium" />
+            <ColorModeIcon size="medium" />
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
