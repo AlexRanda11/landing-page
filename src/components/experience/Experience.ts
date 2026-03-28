@@ -61,7 +61,7 @@ const experience = [
         startDate: 'June 2017',
         endDate: 'September 2018',
         description: 'Developer Advocate for IBM Cloud.',
-        responsiblities: [
+        responsibilities: [
             'Building relationships with startups, developers and accelerators/incubators.',
             'Planning, running and facilitating regular IBM Cloud meetups.',
             'Delivering tech talks at IBM and non-IBM events to promote IBM Cloud and Softlayer.',

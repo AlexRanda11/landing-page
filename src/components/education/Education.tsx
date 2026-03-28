@@ -24,8 +24,18 @@ export default function Education() {
                     {educationContent.education.map((education: any) => (
                         <Card sx={{ mb: 3 }}>
                             <CardContent>
-                            <Typography variant="h5" style={{ paddingBottom: '1rem', cursor: 'pointer' }} onClick={() => {window.open(education.courseURL)}}>
-                                {education.degreeTitle}<Typography variant="subtitle2">{education.startDate} - {education.endDate}</Typography>
+                            <Typography 
+                                variant="h5" 
+                                sx={{ '&:hover': { 
+                                    textDecoration: 'underline', 
+                                    cursor: 'pointer' 
+                                }}} 
+                                onClick={() => {window.open(education.courseURL)}}
+                            >
+                                {education.degreeTitle}
+                            </Typography>
+                            <Typography variant="subtitle2" sx={{ paddingBottom: '1rem' }}>
+                                {education.startDate} - {education.endDate}
                             </Typography>
                             <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{education.universityName}</Typography>
                             <Typography variant="body1" color="text.secondary">{education.description}

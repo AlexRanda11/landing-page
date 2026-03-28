@@ -22,8 +22,11 @@ export default function Experience() {
                         {experienceContent.experience.map((job: any) => (
                             <Card sx={{ mb: 3 }}>
                                     <CardContent key={job.id}>
-                                        <Typography variant="h5" style={{ paddingBottom: '1rem' }}>
-                                            {job.jobTitle}<Typography variant="subtitle2">{job.startDate} - {job.endDate}</Typography>
+                                        <Typography variant="h5">
+                                            {job.jobTitle}
+                                        </Typography>
+                                        <Typography variant="subtitle2" sx={{ paddingBottom: '1rem' }}>
+                                            {job.startDate} - {job.endDate}
                                         </Typography>
                                         <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{job.companyName}
                                         </Typography>
