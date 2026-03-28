@@ -47,7 +47,7 @@ export default function Header() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <SiteIcon icon="AR1" />
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: '1rem' }}>
               {headerContent.tabs.map((tab, index) => (
                 <Button
                   key={index}
@@ -56,7 +56,9 @@ export default function Header() {
                   size="small"
                   onClick={() => navigate(tab.url)}
                 >
-                  {tab.title}
+                  <Typography variant="h6">
+                    {tab.title}
+                  </Typography>
                 </Button>
               ))}
             </Box>
@@ -76,16 +78,17 @@ export default function Header() {
               <MenuIcon />
             </IconButton>
             <Drawer
-              anchor="top"
+              anchor="right"
               open={open}
               onClose={toggleDrawer(false)}
               PaperProps={{
                 sx: {
                   top: 'var(--template-frame-height, 0px)',
+                  width: '50%',
                 },
               }}
             >
-              <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
+              <Box sx={{ p: 2, backgroundColor: 'background.default', height: '100%' }}>
                 <Box
                   sx={{
                     display: 'flex',
@@ -99,37 +102,9 @@ export default function Header() {
 
                 {headerContent.tabs.map((tab, index) => (
                   <MenuItem key={index} onClick={() => navigate(tab.url)}>
-                    {tab.title}
-                  </MenuItem>
-                ))}
-
-                {/* Divider for separating main tabs and sub-pages */}
-                <Divider sx={{ my: 3 }} />
-
-                {/* Resume Heading */}
-                <Typography
-                  variant="subtitle1"
-                  sx={{
-                    fontWeight: 'bold',
-                    paddingRight: 2,
-                    mt: 2,
-                    mb: 1,
-                    color: 'text.primary',
-                  }}
-                >
-                  {headerContent.tabs[1].title}
-                </Typography>
-
-                {/* Sub-pages for Resume */}
-                {headerContent.resumeSubTabs.map((subPage, index) => (
-                  <MenuItem
-                    key={index}
-                    onClick={() => {
-                      navigate(subPage.url);
-                      toggleDrawer(false)(); // Close the drawer after navigation
-                    }}
-                  >
-                    {subPage.title}
+                    <Typography variant="h6">
+                      {tab.title}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Box>
