@@ -10,6 +10,7 @@ import Experience from "../../components/experience/Experience.tsx";
 import TitleText from "../titleText/TitleText.tsx";
 import Education from "../../components/education/Education.tsx";
 import Footer from "../../components/footer/Footer.tsx";
+import Badges from "../../components/badges/Badges.tsx";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -96,7 +97,7 @@ export default function Resume() {
             <Education />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
-            {resumeContent.comingSoonText}
+            <Badges />
           </CustomTabPanel>
         </Box>
       </Container>
