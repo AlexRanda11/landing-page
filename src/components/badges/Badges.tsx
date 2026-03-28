@@ -3,6 +3,10 @@ import { badgesContent } from "./Badges.ts";
 import TitleText from "../../pages/titleText/TitleText.tsx"
 
 export default function Badges() {
+    const isUUID = (id: string): boolean => {
+        return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+    };
+
     return (
         <Box>
             <TitleText
@@ -21,8 +25,8 @@ export default function Badges() {
                     }}>
                         {badgesContent.badges.map((badge: any) => (
                             <Card sx={{ mb: 3 }}>
-                                <CardContent key={badge.title}>
-                                    <Typography variant="h5">
+                                <CardContent key={badge.id}>
+                                    <Typography variant="h5" sx={isUUID(badge.id) ? {"&:hover": {textDecoration: "underline", cursor: "pointer"}} : {}} onClick={() => {isUUID(badge.id) && window.open(`${badgesContent.badgeBaseUrl1}${badge.id}${badgesContent.badgeBaseUrl2}`)}}>
                                         {badge.title}
                                     </Typography>
                                     <Typography color={badge.expiryDate && 'red'} variant="subtitle2" sx={{ paddingBottom: '1rem'}}>
