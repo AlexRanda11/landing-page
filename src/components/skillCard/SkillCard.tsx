@@ -47,7 +47,7 @@ export default function SkillCards() {
                                                             >{skill.name}</Typography>
                                                     </Tooltip>
                                                     <LinearProgress
-                                                        variant='determinate'
+                                                        variant='buffer'
                                                         value={skill.proficiency}
                                                         />
                                                 </Box>
