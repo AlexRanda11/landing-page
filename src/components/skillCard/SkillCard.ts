@@ -54,7 +54,7 @@ const skillsData: SkillCategory[] = [
                 description: 'Deep expertise in building scalable microservices and RESTful APIs with Spring Boot.' 
             },
             { 
-                name: 'Node.js', 
+                name: 'Node.js Express', 
                 proficiency: 60, 
                 description: 'Proficient with Express.js and building robust backend services.' 
             },

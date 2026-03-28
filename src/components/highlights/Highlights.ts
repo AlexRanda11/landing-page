@@ -1,6 +1,6 @@
 const cardData = [
     {
-      img: 'public/assets/images/innovation-fair.jpg',
+      img: '/landing-page/assets/images/innovation-fair.jpg',
       tag: 'University',
       title: 'UOWD Innovation Fair 2018 - Second Place Winner',
       description:
