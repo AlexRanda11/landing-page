@@ -17,8 +17,8 @@ export default function Education() {
                         display: 'flex',
                         flexDirection: 'column',
                         marginBottom: 4,
-                        pl: { xs: 6, sm: 6 },
-                        pr: { xs: 6, sm: 6 },
+                        pl: { sm: 5, xs: 2 },
+                        pr: { sm: 5, xs: 2},
                     }}
                 >
                     {educationContent.education.map((education: any) => (
