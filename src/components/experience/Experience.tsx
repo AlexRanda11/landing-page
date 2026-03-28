@@ -13,11 +13,12 @@ export default function Experience() {
             <Box sx={{ mb: 6 }}>
                 <Container
                     sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
                         marginBottom: 4,
-                        pl: { xs: 6, sm: 6 },
-                        pr: { xs: 6, sm: 6 },
-                    }}
-                    >
+                        pl: { sm: 5, xs: 2 },
+                        pr: { sm: 5, xs: 2 },
+                    }}>
                         {experienceContent.experience.map((job: any) => (
                             <Card sx={{ mb: 3 }}>
                                     <CardContent key={job.id}>
