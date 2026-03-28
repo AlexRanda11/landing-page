@@ -86,6 +86,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
                         component="img"
                         alt="green iguana"
                         image={card.img}
+                        loading="lazy"
                         sx={{
                           aspectRatio: '16 / 9',
                           borderBottom: '1px solid',
