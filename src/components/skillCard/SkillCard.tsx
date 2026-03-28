@@ -16,13 +16,15 @@ export default function SkillCards() {
                     {skillCardContent.skills.map((category, index) => {
                         return (
                             <Container 
-                            key={index}
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                marginBottom: 4,}}
+                                key={index}
                                 maxWidth={'lg'}
-                                >
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    marginBottom: 4,
+                                    pl: { sm: 3, xs: 0 },
+                                    pr: { sm: 3, xs: 0 },
+                                }}>
                             <Card>
                                 <CardContent>
                                     <Typography 
