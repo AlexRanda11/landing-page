@@ -1,3 +1,3 @@
 export const heroContent = {
-    image: '/landing-page/assets/images/profile-image.jpg',
+    image: '/landing-page/assets/images/profile-image.png',
 }

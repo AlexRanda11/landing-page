@@ -1,6 +1,6 @@
 const cardData = [
     {
-      img: 'https://media.licdn.com/dms/image/v2/C4E2DAQH6-KoLVK4XlA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1595073873890?e=1754845200&v=beta&t=-FOTOsB7uzcY42rqKlv92Sv3tjvg2YhePWCV7gGffKY',
+      img: 'public/assets/images/innovation-fair.jpg',
       tag: 'University',
       title: 'UOWD Innovation Fair 2018 - Second Place Winner',
       description:
@@ -12,7 +12,7 @@ const cardData = [
       ],
     },
     {
-      img: 'https://media.licdn.com/dms/image/v2/C512DAQFMemhrCIjwRw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1601711198759?e=1754845200&v=beta&t=oOOQm_t68BDFiV--IoftmD4kR8z-CtyzomsR6SJgf1k',
+      img: 'https://www.uowdubai.ac.ae/sites/default/files/2018-05/JAVA-Expo--banner.jpg',
       tag: 'University',
       title: 'Java Project Fair, First Place Winner',
       description:
