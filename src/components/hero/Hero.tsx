@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import { heroContent } from './Hero';
 import HeroName from './hero-name/HeroName.tsx';
 import HeroText from './hero-text/HeroText.tsx';
@@ -34,12 +34,11 @@ export default function Hero() {
           sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
         >
           <HeroName />
-          <img
-            src={heroContent.image}
-            style={{
-              maxWidth: '250px',
-              height: '15rem',
-              width: '15rem',
+          <Box
+            sx={{
+              maxWidth: { xs: '12rem', sm: '250px' },
+              height: { xs: '12rem', lg: '15rem' },
+              width: { xs: '13rem', lg: '15rem' },
               borderRadius: '8px',
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
               padding: '8px',
@@ -47,7 +46,9 @@ export default function Hero() {
               marginTop: '16px',
               marginBottom: '16px'
             }}
-            />
+            component="img"
+            src={heroContent.image}
+          />
           <HeroText />
         </Stack>
       </Container>

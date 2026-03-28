@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { Box, AppBar, Toolbar, Button, IconButton, Container, Divider, MenuItem, Drawer, Typography } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, IconButton, Container, MenuItem, Drawer, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIcon from '../../shared-theme/ColorModeIcon';
