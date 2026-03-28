@@ -37,9 +37,9 @@ export default function Hero() {
           <img
             src={heroContent.image}
             style={{
-              width: '100%',
               maxWidth: '250px',
-              height: 'auto',
+              height: '15rem',
+              width: '15rem',
               borderRadius: '8px',
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
               padding: '8px',
