@@ -87,6 +87,7 @@ export default function Resume() {
               <Tab label={resumeContent.tabs[0]} {...a11yProps(0)} />
               <Tab label={resumeContent.tabs[1]} {...a11yProps(1)} />
               <Tab label={resumeContent.tabs[2]} {...a11yProps(2)} />
+              <Tab label={resumeContent.tabs[3]} {...a11yProps(3)} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
@@ -94,9 +95,11 @@ export default function Resume() {
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
             <Experience />
-            <Education />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
+            <Education />
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={3}>
             <Badges />
           </CustomTabPanel>
         </Box>
