@@ -21,16 +21,18 @@ export default function Education() {
                         pr: { xs: 6, sm: 6 },
                     }}
                 >
-                    <Card sx={{ mb: 3 }}>
-                        <CardContent>
-                        <Typography variant="h6">
-                            [Degree Name] | [University Name] | [Graduation Year]
-                        </Typography>
-                        <Typography variant="body1" color="text.secondary">
-                            Relevant Coursework / Key Projects (Optional, brief)
-                        </Typography>
-                        </CardContent>
-                    </Card>
+                    {educationContent.education.map((education: any) => (
+                        <Card sx={{ mb: 3 }}>
+                            <CardContent>
+                            <Typography variant="h5" style={{ paddingBottom: '1rem', cursor: 'pointer' }} onClick={() => {window.open(education.courseURL)}}>
+                                {education.degreeTitle}<Typography variant="subtitle2">{education.startDate} - {education.endDate}</Typography>
+                            </Typography>
+                            <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{education.universityName}</Typography>
+                            <Typography variant="body1" color="text.secondary">{education.description}
+                            </Typography>
+                            </CardContent>
+                        </Card>
+                    ))}
                     <SeeMore
                         text={educationContent.buttonText}
                         url="/research"
