@@ -34,10 +34,10 @@ export default function Education() {
                             >
                                 {education.degreeTitle}
                             </Typography>
-                            <Typography variant="subtitle2" sx={{ paddingBottom: '1rem' }}>
+                            <Typography variant="subtitle2" color='text.secondary' sx={{ paddingBottom: '1rem' }}>
                                 {education.startDate} - {education.endDate}
                             </Typography>
-                            <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{education.universityName}</Typography>
+                            <Typography variant="subtitle1" sx={{ paddingBottom: '1rem' }}>{education.universityName}</Typography>
                             <Typography variant="body1" color="text.secondary">{education.description}
                             </Typography>
                             </CardContent>

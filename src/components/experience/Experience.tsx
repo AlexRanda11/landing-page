@@ -25,18 +25,18 @@ export default function Experience() {
                                         <Typography variant="h5">
                                             {job.jobTitle}
                                         </Typography>
-                                        <Typography variant="subtitle2" sx={{ paddingBottom: '1rem' }}>
+                                        <Typography variant="subtitle2" color='text.secondary' sx={{ paddingBottom: '1rem' }}>
                                             {job.startDate} - {job.endDate}
                                         </Typography>
-                                        <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{job.companyName}
+                                        <Typography variant="subtitle1" sx={{ paddingBottom: '1rem' }}>{job.companyName}
                                         </Typography>
-                                        <Typography style={{ paddingBottom: '1rem' }}>{job.description}</Typography>
+                                        <Typography variant="body1" color="text.secondary" sx={{ paddingBottom: '1rem' }}>{job.description}</Typography>
                                         {job.responsibilities && 
                                         <>
-                                        <Typography>Responsibilities:</Typography>
+                                        <Typography variant="body1">Responsibilities:</Typography>
                                             <ul>
                                                 {job.responsibilities.map((responsibility: any) => (
-                                                    <li><Typography variant="body1">{responsibility}</Typography></li>
+                                                    <li><Typography variant="body1" color="text.secondary">{responsibility}</Typography></li>
                                                 ))}
                                             </ul>
                                         </>}
