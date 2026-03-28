@@ -18,28 +18,27 @@ export default function Experience() {
                         pr: { xs: 6, sm: 6 },
                     }}
                     >
-                    <Card sx={{ mb: 3 }}>
-                        <CardContent>
-                        <Typography variant="h6">
-                            [Your Latest Job Title] | [Company Name] | [Start Date] – [End Date]
-                        </Typography>
-                        <ul>
-                            <li><Typography variant="body1">**Key Responsibility 1:** Briefly describe a major duty.</Typography></li>
-                            <li><Typography variant="body1">**Achievement 1:** Quantify an accomplishment (e.g., "Increased efficiency by 15% through X").</Typography></li>
-                        </ul>
-                        </CardContent>
-                    </Card>
-                    <Card>
-                        <CardContent>
-                        <Typography variant="h6">
-                            [Previous Job Title] | [Company Name] | [Start Date] – [End Date]
-                        </Typography>
-                        <ul>
-                            <li><Typography variant="body1">**Key Responsibility 1:** Briefly describe a major duty.</Typography></li>
-                            <li><Typography variant="body1">**Achievement 1:** Quantify an accomplishment.</Typography></li>
-                        </ul>
-                        </CardContent>
-                    </Card>
+                        {experienceContent.experience.map((job: any) => (
+                            <Card sx={{ mb: 3 }}>
+                                    <CardContent key={job.id}>
+                                        <Typography variant="h5" style={{ paddingBottom: '1rem' }}>
+                                            {job.jobTitle}<Typography variant="subtitle2">{job.startDate} - {job.endDate}</Typography>
+                                        </Typography>
+                                        <Typography variant="subtitle1" style={{ paddingBottom: '1rem' }}>{job.companyName}
+                                        </Typography>
+                                        <Typography style={{ paddingBottom: '1rem' }}>{job.description}</Typography>
+                                        {job.responsibilities && 
+                                        <>
+                                        <Typography>Responsibilities:</Typography>
+                                            <ul>
+                                                {job.responsibilities.map((responsibility: any) => (
+                                                    <li><Typography variant="body1">{responsibility}</Typography></li>
+                                                ))}
+                                            </ul>
+                                        </>}
+                                    </CardContent>
+                            </Card>
+                        ))}
                 </Container>
             </Box>
         </Box>
