@@ -64,7 +64,7 @@ export default function Resume() {
     <AppTheme>
       <CssBaseline enableColorScheme />
       <Header />
-      <Container sx={{ pt: { xs: 12, sm: 12 }, pb: { xs: 4, sm: 6 } }}>
+      <Container sx={{ pt: { xs: 12, sm: 12 }, pb: { xs: 0, sm: 0 } }}>
         <Breadcrumb currentPage={resumeContent.title} subPage={resumeContent.tabs[value]}/>
         <TitleText
           title={resumeContent.title}

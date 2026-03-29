@@ -38,7 +38,7 @@ export default function Hero() {
             sx={{
               maxWidth: { xs: '12rem', sm: '250px' },
               height: { xs: '12rem', lg: '15rem' },
-              width: { xs: '13rem', lg: '15rem' },
+              width: { xs: '12rem', lg: '15rem' },
               borderRadius: '8px',
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
               padding: '8px',

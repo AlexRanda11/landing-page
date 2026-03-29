@@ -14,7 +14,7 @@ export default function Badges() {
                 description={badgesContent.badgesDescription}
                 size="h2"
             />
-            <Box sx={{ mb: 6 }}>
+            <Box sx={{ mb: 3 }}>
                 <Container
                     sx={{
                         display: 'flex',
