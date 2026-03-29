@@ -19,7 +19,7 @@ export default function Research() {
                         size="h1"
                     />
                 </Container>
-                <Box sx={{ mb: 6 }}>
+                <Box sx={{ mb: 8 }}>
                     <Container
                         sx={{
                             display: 'flex',

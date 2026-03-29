@@ -11,7 +11,7 @@ export default function SkillCards() {
                 size="h2"
             />
             
-            <Box sx={{ mb: 6 }}>
+            <Box sx={{ mb: 8 }}>
                 <Container>
                     {skillCardContent.skills.map((category, index) => {
                         return (

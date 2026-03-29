@@ -11,7 +11,7 @@ export default function Education() {
                 description={educationContent.educationDescription}
                 size="h2"
             />
-            <Box sx={{ mb: 3 }}>
+            <Box sx={{ mb: 5 }}>
                 <Container
                     sx={{
                         display: 'flex',

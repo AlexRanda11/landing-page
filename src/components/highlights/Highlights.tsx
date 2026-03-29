@@ -114,7 +114,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
         </Box>
         <SeeMore
           text={highlightsContent.seeMoreButtonText}
-          url="/research"
+          url="https://www.linkedin.com/in/alexranda11/recent-activity/all/"
         />
       </Container>
     );
